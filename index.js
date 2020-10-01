@@ -17,3 +17,9 @@ bot.on('message', (msg) => {
     } 
     
 });
+
+bot.on('message', function(msg){
+    const chatId = msg.chat.id;
+    console.log(msg.text);
+    bot.sendMessage(chatId, 'Obrigado por sua mensagem');
+});
